@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #e0f7fa;
@@ -5,7 +6,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
 }
 
@@ -14,7 +15,7 @@ body {
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 30px;
 }
 
@@ -29,16 +30,17 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 20px;
   align-items: flex-start;
+  margin: 0 auto; /* Asegurar que el contenedor esté centrado horizontalmente */
 }
 
 .column {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 30%;
-  align-self: flex-start;
+  flex: 1;
+  max-width: 30%;
 }
 
 .contact-form {
@@ -77,10 +79,10 @@ h2 {
 
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 0;
-  width: 70%;
+  flex: 2;
 }
 
 .contact {
@@ -91,7 +93,7 @@ h2 {
   border-radius: 10px;
   background: #ffffff;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-  width: calc(100% - 40px);
+  width: 350px; /* Hacer las cajas más anchas */
 }
 
 .contact h3 {
