@@ -3,7 +3,7 @@ import Contact from "./Contact";
 
 const ContactList = ({ contacts, deleteContact, toggleFavorite }) => {
   return (
-    <div>
+    <div className="contact-list">
       {contacts.map((contact) => (
         <Contact
           key={contact.id}

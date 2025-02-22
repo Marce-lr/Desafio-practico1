@@ -9,7 +9,7 @@ function App() {
   // Se cargan los contactos desde el .json
   useEffect(() => {
     const fetchContacts = async () => {
-      const response = await fetch("/contacts.json");
+      const response = await fetch("/contact.json");
       const data = await response.json();
       setContacts(data);
     };
@@ -39,14 +39,20 @@ function App() {
   const sortedContacts = contacts.sort((a, b) => b.isFavorite - a.isFavorite);
 
   return (
-    <div>
+    <div className="app-container">
       <h2>Lista de Contactos</h2>
-      <Form addContact={addContact} />
-      <ContactList
-        contacts={sortedContacts}
-        deleteContact={deleteContact}
-        toggleFavorite={toggleFavorite}
-      />
+      <div className="columns-container">
+        <div className="column">
+          <Form addContact={addContact} />
+        </div>
+        <div className="column">
+          <ContactList
+            contacts={sortedContacts}
+            deleteContact={deleteContact}
+            toggleFavorite={toggleFavorite}
+          />
+        </div>
+      </div>
     </div>
   );
 }
